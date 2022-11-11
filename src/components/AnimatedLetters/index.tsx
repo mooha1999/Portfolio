@@ -21,5 +21,5 @@ export default AnimatedLetters;
 interface Props{
   letterClass? : string;
   text : string;
-  idx: number;
+  idx: number;//Seconds for animation delay multiplied by 10
 }
