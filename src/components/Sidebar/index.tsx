@@ -8,6 +8,7 @@ import {
   faUser,
   faEnvelope,
   IconDefinition,
+  faSuitcase,
 } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 const Sidebar = () => {
@@ -31,6 +32,7 @@ const Sidebar = () => {
   }[] = [
     { to: "/", icon: faHome },
     { to: "/about", icon: faUser, className: "about-link" },
+    { to: "/portfolio", icon: faSuitcase, className: "portfolio-link" },
     { to: "/contact", icon: faEnvelope, className: "contact-link" },
   ];
 
