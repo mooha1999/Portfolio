@@ -26,7 +26,7 @@ const Contact = () => {
       )
       .then(() => {
         alert("Sent successfully");
-        // window.location.reload(false);
+        window.location.reload();
       })
       .catch((r) => {
         console.error(r);
@@ -87,9 +87,9 @@ const Contact = () => {
             <br />
             <span>developer.ahmed99@gmail.com</span>
           </div>
-          <MapContainer center={[44, 19]} zoom={13}>
+          <MapContainer center={[30.014616, 31.227259]} zoom={13}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            <Marker position={[44, 19]}>
+            <Marker position={[30.014616, 31.227259]}>
               <Popup>هنا يرقد الحزلقوم</Popup>
             </Marker>
           </MapContainer>

@@ -42,7 +42,7 @@ const Sidebar = () => {
       </Link>
       <nav>
         {navLinks.map(({ to, icon, className }) => (
-          <NavLink to={to} className={className || ""} key={Math.random()}>
+          <NavLink to={to} end={true} className={className || ""} key={Math.random()}>
             <FontAwesomeIcon icon={icon} color={greyColor} />
           </NavLink>
         ))}
