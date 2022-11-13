@@ -9,9 +9,16 @@ import {
   faEnvelope,
   IconDefinition,
   faSuitcase,
+  faBars,
+  faClose,
 } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { useState } from "react";
 const Sidebar = () => {
+  const [showNav, setShowNav] = useState<boolean>(false);
+
+  const toggleShowNav = () => setShowNav(!showNav);
+
   const greyColor = "#4d4d4e";
 
   const contacts: {
@@ -42,12 +49,25 @@ const Sidebar = () => {
         <img src={logoS} alt="logo" />
         <img className="sub-logo" src={logoSubtitle} alt="logo subtitle" />
       </Link>
-      <nav>
+      <nav className={showNav ? "mobile-show" : ""}>
         {navLinks.map(({ to, icon, className }) => (
-          <NavLink to={to} end={true} className={className || ""} key={Math.random()}>
+          <NavLink
+            to={to}
+            end={true}
+            className={className || ""}
+            onClick={toggleShowNav}
+            key={Math.random()}
+          >
             <FontAwesomeIcon icon={icon} color={greyColor} />
           </NavLink>
         ))}
+        <FontAwesomeIcon
+          icon={faClose}
+          size="3x"
+          color="#ffd700"
+          onClick={toggleShowNav}
+          className="close-icon"
+        />
       </nav>
       <ul>
         {contacts.map((link) => (
@@ -58,6 +78,13 @@ const Sidebar = () => {
           </li>
         ))}
       </ul>
+      <FontAwesomeIcon
+        onClick={toggleShowNav}
+        icon={faBars}
+        color="#ffd700"
+        size="3x"
+        className="hamburger-icon"
+      />
     </div>
   );
 };
