@@ -7,16 +7,10 @@
       "url": "https://asu-buddy.web.app/"
     },
     {
-      "cover": "/portfolio/1.jpg",
-      "title": "Places",
-      "description": "A place to share yout places",
-      "url": "https://asu-buddy.web.app/"
-    },
-    {
-      "cover": "/portfolio/1.jpg",
-      "title": "Places",
-      "description": "A place to share yout places",
-      "url": "https://asu-buddy.web.app/"
+      "cover": "/portfolio/2.jpg",
+      "title": "Portfolio",
+      "description": "This landing page",
+      "url": "/"
     }
   ]
 }
