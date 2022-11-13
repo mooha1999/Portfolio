@@ -1,7 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import "./index.scss";
 import logoS from "../../assets/images/logo-s.png";
-import logoSubtitle from "../../assets/images/logo_sub.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
@@ -12,7 +11,7 @@ import {
   faBars,
   faClose,
 } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin, faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { useState } from "react";
 const Sidebar = () => {
   const [showNav, setShowNav] = useState<boolean>(false);
@@ -25,11 +24,9 @@ const Sidebar = () => {
     href: string;
     icon: IconDefinition;
   }[] = [
-    {
-      href: "https://www.linkedin.com/in/ahmed-sameh-6a2113189/",
-      icon: faLinkedin,
-    },
+    { href: "https://www.linkedin.com/in/ahmed-sameh-6a2113189/", icon: faLinkedin },
     { href: "https://github.com/mooha1999", icon: faGithub },
+    { href: "https://twitter.com/developer_sameh", icon: faTwitter}
   ];
 
   const navLinks: {
@@ -45,9 +42,8 @@ const Sidebar = () => {
 
   return (
     <div className="nav-bar">
-      <Link className="logo" to="/">
+      <Link className="logo" to="/contact">
         <img src={logoS} alt="logo" />
-        <img className="sub-logo" src={logoSubtitle} alt="logo subtitle" />
       </Link>
       <nav className={showNav ? "mobile-show" : ""}>
         {navLinks.map(({ to, icon, className }) => (
