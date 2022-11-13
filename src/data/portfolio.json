@@ -1,0 +1,10 @@
+{
+  "portfolio": [
+    {
+      "cover": "/portfolio/1.jpg",
+      "title": "Places",
+      "description": "A place to share yout places",
+      "url": "https://asu-buddy.web.app/"
+    }
+  ]
+}
