@@ -115,7 +115,7 @@
 }
 
 .hamburger-icon,
-.close-icon{
+.close-icon {
   display: none;
 }
 
@@ -124,7 +124,7 @@
     overflow: visible;
     background: transparent;
     position: initial;
-    height: auto;
+    height: 100%;
     min-height: auto;
 
     ul,
@@ -132,6 +132,14 @@
       display: none;
     }
 
+    ul {
+      height: 50%;
+      background-color: #181818;
+      z-index: 2;
+      &.mobile-show {
+        display: block;
+      }
+    }
     nav {
       // display: block;
       width: 100%;
@@ -158,17 +166,16 @@
         opacity: 1 !important;
       }
 
-      &.mobile-show{
+      &.mobile-show {
         display: block;
       }
     }
     .hamburger-icon,
-    .close-icon{
+    .close-icon {
       display: block;
       position: absolute;
       top: 15px;
       right: 15px;
-      
     }
   }
 }
