@@ -1,8 +1,8 @@
 import "./index.scss";
 import LogoS from "../../../assets/images/logo-s.png";
-import { useEffect, useRef } from "react";
-import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin';
-import gsap from "gsap-trial";
+import { /*useEffect,} */useRef } from "react";
+// import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin';
+// import gsap from "gsap-trial";
 
 const Logo = () => {
 
@@ -10,31 +10,31 @@ const Logo = () => {
   const outlineLogoRef = useRef<null | SVGPathElement>(null);
   const solidLogoRef = useRef<null | HTMLImageElement>(null);
 
-  useEffect(()=>{
-    gsap.registerPlugin(DrawSVGPlugin);
+  // useEffect(()=>{
+  //   gsap.registerPlugin(DrawSVGPlugin);
     
     
-    gsap.timeline()
-      .to(bgRef.current, {
-        duration: 1,
-        opacity: 1,
-        // onComplete: () => alert('"To" has completed')
-      })
-      .from(outlineLogoRef.current, {
-        drawSVG: 0,
-        duration: 20,
-      });
+  //   gsap.timeline()
+  //     .to(bgRef.current, {
+  //       duration: 1,
+  //       opacity: 1,
+  //       // onComplete: () => alert('"To" has completed')
+  //     })
+  //     .from(outlineLogoRef.current, {
+  //       drawSVG: 0,
+  //       duration: 20,
+  //     });
 
-    gsap.fromTo(
-      solidLogoRef.current, {
-        opacity: 0,
-      },{
-        opacity: 1,
-        delay: 4,
-        duration: 4, 
-      }
-    );
-  },[])
+  //   gsap.fromTo(
+  //     solidLogoRef.current, {
+  //       opacity: 0,
+  //     },{
+  //       opacity: 1,
+  //       delay: 4,
+  //       duration: 4, 
+  //     }
+  //   );
+  // },[])
   
   return (
     <div className="logo-container" ref={bgRef}>
@@ -49,7 +49,7 @@ const Logo = () => {
         <g
           className="svg-container"
           transform="translate(0 457) scale(.1 -.1)"
-          fill="none"
+          // fill="none"
         >
           <path
             ref={outlineLogoRef}
