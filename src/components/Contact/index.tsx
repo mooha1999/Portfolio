@@ -44,7 +44,7 @@ const Contact = () => {
               letterClass={letterClass}
             />
           </h1>
-          <p>This is some lame text about me bla bla bla</p>
+          <p>I would be happy to hear from you</p>
           <div className="contact-form">
             <form ref={refForm} onSubmit={sendEmail} id="contactForm">
               <ul>
